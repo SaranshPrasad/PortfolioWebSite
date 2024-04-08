@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body {
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+  }
+#main{
+    min-height: 100vh;
+}
+
+#first{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#first h2{
+   font-size: 1rem;
+}
+#right, #left{
+    width: 20%;
+    padding: 10px;
+    transition: width 0.3s ease, height 0.3s ease;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+#right{
+    background-color: rgb(189, 135, 239);
+    transform: translateY(-150px);
+    border-radius: 25px;
+    padding: 40px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.txt{
+    margin-top: 20px;
+    color: white;
+    overflow: hidden;
+}
+#text, #text-2{
+    overflow: hidden;
+    height: 50%;
+}
+#left{
+    background-color: rgb(255, 146, 164);
+    transform: translateY(150px);
+    border-radius: 25px;
+    padding: 40px;
+}
+
+
+
+hr{
+background-color: black;
+border: 1px solid black;
+width: 10%;
+}
+
+.border-class{
+    border: 1px solid white;
+}
+#middle h1{
+    text-align: center;
+    font-size: 1rem;
+}
+#middle #social-links a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    transition: .4s all ease;
+}
+
+#middle #social-links{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+#middle #social-links a:hover{
+    transform: scale(1.4);
+}
+
+.dialogue{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgb(235, 242, 245);
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+  }
+.block{
+    display: none;
+}
+  .dialogue p{
+    padding: 25px;
+  }
+
+  .dialogue a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+
+
+
+  @keyframes slideIn {
+    from {
+      transform: translate(-50%, 100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0); 
+    }
+
+    50% {
+      transform: translate(10px); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+
+
+  #footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    gap: 1rem;
+    transform: translateY(-210px);
+    
+  }
+
+  .footer-icons{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+@media (max-width:600px){
+    body{
+        min-width: 100%;
+        overflow: visible;
+    }
+    #first{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 20px;
+    }
+    #right, #left{
+        width: 90%;
+        transform: translate(0);
+    }
+    #footer{
+        margin: 20px;
+        transform: translate(0);
+    }
+
+    .dialogue{
+        width: 90%;
+    }
+
+    .dialogue p{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    body{
+        min-width: 100%;
+        overflow: visible;
+    }
+    #first{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 2rem;
+    }
+    #right, #left{
+        width: 90%;
+        transform: translate(0);
+    }
+    #footer{
+        transform: translate(0);
+        margin: 20px;
+    }
+    .dialogue{
+        width: 90%;
+    }
+
+    .dialogue p{
+        width: 100%;
+    }
+}
+@media (max-width:1024px){
+    body{
+        min-width: 100%;
+        overflow: visible;
+    }
+    #first{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap:2rem;
+    }
+    #right, #left{
+        width: 90%;
+        transform: translate(0);
+    }
+    #footer{
+        transform: translate(0);
+        margin: 20px;
+    }
+    .dialogue{
+        width: 90%;
+    }
+
+    .dialogue p{
+        width: 100%;
+    }
+}
