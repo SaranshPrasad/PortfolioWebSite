@@ -83,6 +83,9 @@ width: 10%;
     transform: scale(1.4);
 }
 
+
+
+
 .dialogue{
     display: none;
     position: fixed;
@@ -91,8 +94,6 @@ width: 10%;
     transform: translate(-50%, 0);
     background-color: rgb(239, 239, 239);
     padding: 20px;
-    /* border: 2px solid black; */
-    /* border-radius: 25px; */
     animation: slideIn 0.5s ease-in-out forwards;
     display: flex;
     flex-direction: column;
@@ -127,7 +128,33 @@ width: 10%;
     font-size: 2rem;
 }
 
-
+/* Preloader */
+#wrapper {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  #typing-demo {
+    width: 17ch;
+    animation: typing 2.5s , step-end alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 
 /* 
 .name{
