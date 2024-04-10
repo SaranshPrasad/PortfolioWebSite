@@ -30,52 +30,55 @@ if (wapper) {
   });
 }
 
+
+
+
+
+
+
+
+
 d1.addEventListener("click" , () =>{
     dd1.classList.toggle("block");
-
-    if (dd1.classList.contains("block")) {
-        d1.innerHTML = "1";
-    } else {
-        d1.innerHTML = "X";
-    }
-})
+    dd2.classList.add("block");
+    dd3.classList.add("block");
+    dd4.classList.add("block");
+    dd5.classList.add("block");
+});
 
 
 d2.addEventListener("click" , () =>{
     dd2.classList.toggle("block");
-    if (dd2.classList.contains("block")) {
-        d2.innerHTML = "2";
-    } else {
-        d2.innerHTML = "X";
-    }
+    dd1.classList.add("block");
+    dd3.classList.add("block");
+    dd4.classList.add("block");
+    dd5.classList.add("block");
 })
 
 d3.addEventListener("click" , () =>{
     dd3.classList.toggle("block");
-    if (dd3.classList.contains("block")) {
-        d3.innerHTML = "3";
-    } else {
-        d3.innerHTML = "X";
-    }
+    dd2.classList.add("block");
+    dd1.classList.add("block");
+    dd4.classList.add("block");
+    dd5.classList.add("block");
 })
 
 d4.addEventListener("click" , () =>{
     dd4.classList.toggle("block");
-    if (dd4.classList.contains("block")) {
-        d4.innerHTML = "4";
-    } else {
-        d4.innerHTML = "X";
-    }
+    dd2.classList.add("block");
+    dd3.classList.add("block");
+    dd1.classList.add("block");
+    dd5.classList.add("block");
 })
 
 d5.addEventListener("click" , () =>{
     dd5.classList.toggle("block");
-    if (dd5.classList.contains("block")) {
-        d5.innerHTML = "5";
-    } else {
-        d5.innerHTML = "X";
-    }
+    dd2.classList.add("block");
+    dd3.classList.add("block");
+    dd4.classList.add("block");
+    dd1.classList.add("block");
 })
+
 
 // d1.addEventListener("mouseenter", () =>{
 //     dd1.classList.remove("block");
@@ -105,3 +108,5 @@ about.addEventListener("mouseleave", ()=>{
     document.body.style.backgroundColor = 'white';
     about.classList.remove("border-class");
 });
+
+
